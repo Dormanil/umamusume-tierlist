@@ -53,7 +53,7 @@ function SelectedCards(props) {
                 <img
                     className="support-card-image"
                     name={card.id}
-                    src={process.env.PUBLIC_URL + "/cardImages/support_card_s_" + card.id + ".png"}
+                    src={"./cardImages/support_card_s_" + card.id + ".png"}
                     title={card.id}
                     alt={card.id}
                     onClick={() => props.onClick(card)}

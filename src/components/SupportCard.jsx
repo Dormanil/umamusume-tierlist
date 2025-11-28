@@ -20,7 +20,7 @@ function SupportCard(props) {
         if (stat == "none") continue;
         let value = props.card[stat];
         if (stat == "fs_bonus") {
-            value *= props.card["unique_fs_bonus"];
+            value *= (value + 100) * props.card["unique_fs_bonus"] - 100;
         } else if (stat == "specialty_rate") {
             value = (value + 100) * props.card["unique_specialty"] * props.card["fs_specialty"] - 100;
         }
@@ -41,7 +41,7 @@ function SupportCard(props) {
             <img
                 className={alreadySelected ? "support-card-image selected" : "support-card-image"}
                 name={props.id}
-                src={process.env.PUBLIC_URL + "/cardImages/support_card_s_" + props.id + ".png"}
+                src={"./cardImages/support_card_s_" + props.id + ".png"}
                 title={props.charName}
                 alt={props.charName}
                 onClick={alreadySelected ? ()=>{} : props.onClick}
