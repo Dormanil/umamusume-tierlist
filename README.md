@@ -26,10 +26,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 * Navigate to src/global and open a terminal/powershell/etc window
 * Run `db-convert.py` with the path to your master.db. On Windows, this is typically in `C:\Users\your username here\AppData\LocalLow\Cygames\Umamusume\master`
-* If there are any warnings thrown, a card has a new effect, or the database format has changed
-    * If the format has changed, you can probably just replace `src/global/db-convert.py` with `./db-convert.py`
-    * Otherwise, copy the new effects from `./db-convert.py` into `src/global/db-convert.py` and run it again
 * That will update cards.js
+* The events and images are already present from the Japaense server, so there is no need to do anything else.
 * Run `npm install` and `npm run start` to confirm that the new card is present.
 * Make a pull request with the updated file
 
